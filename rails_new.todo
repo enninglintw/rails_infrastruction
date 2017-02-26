@@ -7,3 +7,8 @@ rails_new.todo
   ❑ $ cd ~/Projects/$project_name
   ❑ $ ruby -v
   ❑ $ rails -v
+
+# rails new revert
+❑ $ cd ~/Projects
+❑ $ ls -l playground && rm -rf playground
+❑ $ ls -l playground
