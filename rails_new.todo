@@ -7,6 +7,8 @@ rails_new.todo
   ❑ $ cd ~/Projects/$project_name
   ❑ $ ruby -v
   ❑ $ rails -v
+  ❑ $ git init
+  ❑ $ gaa && gcmsg "$ rails new $project_name -T"
 
 # rails new revert
 ❑ $ cd ~/Projects

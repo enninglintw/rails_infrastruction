@@ -25,5 +25,14 @@ echo
 
   echo "$ rails -v" &&
   rails -v &&
+  echo &&
+
+  echo "$ git init" &&
+  git init &&
+  echo &&
+
+  echo "$ gaa && gcmsg '$ rails new $project_name -T'" &&
+  git add . &&
+  git commit -m "$ rails new $project_name -T" &&
   echo
 ) | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name".rb
