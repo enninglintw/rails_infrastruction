@@ -148,7 +148,7 @@ $ git init
 Initialized empty Git repository in /Users/apple/Projects/playground/.git/
 
 $ gaa && gcmsg '$ rails new playground -T'
-[master (root-commit) 6475b95] $ rails new playground -T
+[master (root-commit) d977bbf] $ rails new playground -T
  50 files changed, 984 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 Gemfile
@@ -200,4 +200,79 @@ $ gaa && gcmsg '$ rails new playground -T'
  create mode 100644 public/robots.txt
  create mode 100644 vendor/assets/javascripts/.keep
  create mode 100644 vendor/assets/stylesheets/.keep
+
+$ sed -i '' 's/sqlite3/mysql2/g' Gemfile && gst
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Gemfile
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ bundle install
+Resolving dependencies...
+Using rake 12.0.0
+Using i18n 0.8.1
+Using json 1.8.6
+Using minitest 5.10.1
+Using thread_safe 0.3.6
+Using tzinfo 1.2.2
+Using activesupport 4.2.5
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using nokogiri 1.7.0.1
+Using rails-deprecated_sanitizer 1.0.3
+Using rails-dom-testing 1.0.8
+Using loofah 2.0.3
+Using rails-html-sanitizer 1.0.3
+Using actionview 4.2.5
+Using rack 1.6.5
+Using rack-test 0.6.3
+Using actionpack 4.2.5
+Using globalid 0.3.7
+Using activejob 4.2.5
+Using mime-types-data 3.2016.0521
+Using mime-types 3.1
+Using mail 2.6.4
+Using actionmailer 4.2.5
+Using activemodel 4.2.5
+Using arel 6.0.4
+Using activerecord 4.2.5
+Using debug_inspector 0.0.2
+Using binding_of_caller 0.7.2
+Using bundler 1.7.12
+Using byebug 9.0.6
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using coffee-script 2.4.1
+Using thor 0.19.4
+Using railties 4.2.5
+Using coffee-rails 4.1.1
+Using concurrent-ruby 1.0.5
+Using multi_json 1.12.1
+Using jbuilder 2.6.3
+Using jquery-rails 4.2.2
+Using mysql2 0.4.2
+Using sprockets 3.7.1
+Using sprockets-rails 3.2.0
+Using rails 4.2.5
+Using rdoc 4.3.0
+Using sass 3.4.23
+Using tilt 2.0.6
+Using sass-rails 5.0.6
+Using sdoc 0.4.2
+Using spring 2.0.1
+Using turbolinks-source 5.0.0
+Using turbolinks 5.0.1
+Using uglifier 3.1.1
+Using web-console 2.3.0
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+
+$ gaa && gcmsg 'Use mysql2 as db'
+[master fbe7d38] Use mysql2 as db
+ 2 files changed, 4 insertions(+), 4 deletions(-)
 

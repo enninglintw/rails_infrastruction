@@ -34,5 +34,19 @@ echo
   echo "$ gaa && gcmsg '$ rails new $project_name -T'" &&
   git add . &&
   git commit -m "$ rails new $project_name -T" &&
+  echo &&
+
+  echo "$ sed -i '' 's/sqlite3/mysql2/g' Gemfile && gst" &&
+  sed -i '' 's/sqlite3/mysql2/g' Gemfile &&
+  git status &&
+  echo &&
+
+  echo "$ bundle install" &&
+  bundle install &&
+  echo &&
+
+  echo "$ gaa && gcmsg 'Use mysql2 as db'" &&
+  git add . &&
+  git commit -m "Use mysql2 as db" &&
   echo
 ) | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name".rb

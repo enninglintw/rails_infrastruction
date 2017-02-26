@@ -9,6 +9,10 @@ rails_new.todo
   ❑ $ rails -v
   ❑ $ git init
   ❑ $ gaa && gcmsg "$ rails new $project_name -T"
+❑ Use mysql2 as db, by replacing "sqlite3" with "mysql2" in Gemfile
+  ❑ $ sed -i '' 's/sqlite3/mysql2/g' Gemfile
+  ❑ $ bundle install
+  ❑ $ gaa && gcmsg 'Use mysql2 as db'
 
 # rails new revert
 ❑ $ cd ~/Projects
