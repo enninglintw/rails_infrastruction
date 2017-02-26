@@ -1,0 +1,9 @@
+rails_new.todo
+
+# rails new
+❑ rails new $project_name -T
+  ❑ $ cd ~/Projects
+  ❑ $ rails new $project_name -T
+  ❑ $ cd ~/Projects/$project_name
+  ❑ $ ruby -v
+  ❑ $ rails -v
