@@ -13,6 +13,13 @@ rails_new.todo
   ❑ $ sed -i '' 's/sqlite3/mysql2/g' Gemfile
   ❑ $ bundle install
   ❑ $ gaa && gcmsg 'Use mysql2 as db'
+❑ Add database.yml & secrets.yml to .gitignore
+  ❑ $ sed -i '' '10,13d' .gitignore
+  ❑ $ echo "\n# config\n/config/database.yml\n/config/secrets.yml" >> .gitignore
+  ❑ $ rm config/database.yml
+  ❑ $ rm config/secrets.yml
+  ❑ $ gst
+  ❑ $ gaa && gcmsg 'Add database.yml & secrets.yml to .gitignore'
 
 # rails new revert
 ❑ $ cd ~/Projects

@@ -48,5 +48,26 @@ echo
   echo "$ gaa && gcmsg 'Use mysql2 as db'" &&
   git add . &&
   git commit -m "Use mysql2 as db" &&
+  echo &&
+
+  echo "$ sed -i '' '10,13d' .gitignore" &&
+  sed -i '' '10,13d' .gitignore &&
+
+  echo "$ echo '\n# config\n/config/database.yml\n/config/secrets.yml' >> .gitignore" &&
+  echo "\n# config\n/config/database.yml\n/config/secrets.yml" >> .gitignore &&
+
+  echo "$ rm config/database.yml" &&
+  rm config/database.yml &&
+
+  echo "$ rm config/secrets.yml" &&
+  rm config/secrets.yml &&
+
+  echo "$ gst" &&
+  git status &&
+  echo &&
+
+  echo "$ gaa && gcmsg 'Add database.yml & secrets.yml to .gitignore'" &&
+  git add . &&
+  git commit -m "Add database.yml & secrets.yml to .gitignore" &&
   echo
 ) | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name".rb

@@ -148,7 +148,7 @@ $ git init
 Initialized empty Git repository in /Users/apple/Projects/playground/.git/
 
 $ gaa && gcmsg '$ rails new playground -T'
-[master (root-commit) d977bbf] $ rails new playground -T
+[master (root-commit) 6c83efd] $ rails new playground -T
  50 files changed, 984 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 Gemfile
@@ -273,6 +273,31 @@ Your bundle is complete!
 Use `bundle show [gemname]` to see where a bundled gem is installed.
 
 $ gaa && gcmsg 'Use mysql2 as db'
-[master fbe7d38] Use mysql2 as db
+[master 21278fa] Use mysql2 as db
  2 files changed, 4 insertions(+), 4 deletions(-)
+
+$ sed -i '' '10,13d' .gitignore
+$ echo '
+# config
+/config/database.yml
+/config/secrets.yml' >> .gitignore
+$ rm config/database.yml
+$ rm config/secrets.yml
+$ gst
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+	deleted:    config/database.yml
+	deleted:    config/secrets.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ gaa && gcmsg 'Add database.yml & secrets.yml to .gitignore'
+[master bc14af4] Add database.yml & secrets.yml to .gitignore
+ 3 files changed, 4 insertions(+), 51 deletions(-)
+ delete mode 100644 config/database.yml
+ delete mode 100644 config/secrets.yml
 
