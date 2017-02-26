@@ -26,4 +26,4 @@ echo
   echo "$ rails -v" &&
   rails -v &&
   echo
-) | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name"_$(date +%Y-%m-%d_%H:%M:%S).rb
+) | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name".rb
