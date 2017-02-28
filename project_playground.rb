@@ -148,7 +148,7 @@ $ git init
 Initialized empty Git repository in /Users/apple/Projects/playground/.git/
 
 $ gaa && gcmsg '$ rails new playground -T'
-[master (root-commit) 6c83efd] $ rails new playground -T
+[master (root-commit) 84dfc1e] $ rails new playground -T
  50 files changed, 984 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 Gemfile
@@ -273,7 +273,7 @@ Your bundle is complete!
 Use `bundle show [gemname]` to see where a bundled gem is installed.
 
 $ gaa && gcmsg 'Use mysql2 as db'
-[master 21278fa] Use mysql2 as db
+[master 1427174] Use mysql2 as db
  2 files changed, 4 insertions(+), 4 deletions(-)
 
 $ sed -i '' '10,13d' .gitignore
@@ -296,8 +296,24 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 $ gaa && gcmsg 'Add database.yml & secrets.yml to .gitignore'
-[master bc14af4] Add database.yml & secrets.yml to .gitignore
+[master a8d65b3] Add database.yml & secrets.yml to .gitignore
  3 files changed, 4 insertions(+), 51 deletions(-)
  delete mode 100644 config/database.yml
  delete mode 100644 config/secrets.yml
+
+$ Add database.yml & secrets.yml && gst
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	config/database.yml.example
+	config/secrets.yml.example
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ gaa && gcmsg 'Add database.yml & secrets.yml'
+[master 70e2565] Add database.yml & secrets.yml
+ 2 files changed, 28 insertions(+)
+ create mode 100644 config/database.yml.example
+ create mode 100644 config/secrets.yml.example
 

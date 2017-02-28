@@ -20,6 +20,22 @@ rails_new.todo
   ❑ $ rm config/secrets.yml
   ❑ $ gst
   ❑ $ gaa && gcmsg 'Add database.yml & secrets.yml to .gitignore'
+❑ Add database.yml & secrets.yml
+  ❑ $ echo "Please enter db password:"
+  ❑ $ read -s mysql_password
+  ❑ $ echo
+  ❑ $resource_folder_path = ~/Projects/@shell_scripts/rails_infrastruction/example
+  ❑ $ cp $resource_folder_path/database.yml.example    config/database.yml.example
+  ❑ $ cp $resource_folder_path/database.yml.example    config/database.yml
+  ❑ $ cp $resource_folder_path/secrets.yml.example     config/secrets.yml.example
+  ❑ $ cp $resource_folder_path/secrets.yml.example     config/secrets.yml
+  ❑ $ sed -i '' "s/\$mysql_password/$mysql_password/g" config/database.yml
+  ❑ $ sed -i '' "s/\$project_name/$project_name/g"          config/database.yml
+  ❑ $ sed -i '' "s/\$project_name/$project_name/g"          config/database.yml.example
+  ❑ $ sed -i '' "s/\$dev_secret_key_base/$(rake secret)/g"  config/secrets.yml
+  ❑ $ sed -i '' "s/\$test_secret_key_base/$(rake secret)/g" config/secrets.yml
+  ❑ $ gst
+  ❑ $ gaa && gcmsg 'Add database.yml & secrets.yml'
 
 # rails new revert
 ❑ $ cd ~/Projects

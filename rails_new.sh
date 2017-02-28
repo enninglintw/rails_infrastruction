@@ -2,6 +2,10 @@ echo "Please enter project name:"
 read project_name
 echo
 
+echo "Please enter mysql password:"
+read -s mysql_password
+echo
+
 (
   echo "Rails infrastruction for project '$project_name':\n" &&
 
@@ -69,5 +73,23 @@ echo
   echo "$ gaa && gcmsg 'Add database.yml & secrets.yml to .gitignore'" &&
   git add . &&
   git commit -m "Add database.yml & secrets.yml to .gitignore" &&
+  echo &&
+
+  echo "$ Add database.yml & secrets.yml && gst" &&
+  cp ~/Projects/@shell_scripts/rails_infrastruction/example/database.yml.example config/database.yml &&
+  cp ~/Projects/@shell_scripts/rails_infrastruction/example/database.yml.example config/database.yml.example &&
+  cp ~/Projects/@shell_scripts/rails_infrastruction/example/secrets.yml.example  config/secrets.yml &&
+  cp ~/Projects/@shell_scripts/rails_infrastruction/example/secrets.yml.example  config/secrets.yml.example &&
+  sed -i '' "s/\$mysql_password/$mysql_password/g"      config/database.yml &&
+  sed -i '' "s/\$project_name/$project_name/g"          config/database.yml &&
+  sed -i '' "s/\$project_name/$project_name/g"          config/database.yml.example &&
+  sed -i '' "s/\$dev_secret_key_base/$(rake secret)/g"  config/secrets.yml &&
+  sed -i '' "s/\$test_secret_key_base/$(rake secret)/g" config/secrets.yml &&
+  git status &&
+  echo &&
+
+  echo "$ gaa && gcmsg 'Add database.yml & secrets.yml'" &&
+  git add . &&
+  git commit -m "Add database.yml & secrets.yml" &&
   echo
 ) | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name".rb
