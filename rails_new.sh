@@ -102,4 +102,4 @@ echo
   git add . &&
   git commit -m "$ rake db:create db:migrate" &&
   echo
-) | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name".rb
+) 2>&1 | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name".rb

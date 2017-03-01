@@ -4,6 +4,7 @@ $ cd ~/Projects && pwd
 /Users/apple/Projects
 
 $ rails new playground -T
+Expected string default value for '--rc'; got false (boolean)
       create  
       create  README.rdoc
       create  Rakefile
@@ -142,13 +143,14 @@ $ ruby -v
 ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14]
 
 $ rails -v
+Expected string default value for '--rc'; got false (boolean)
 Rails 4.2.5
 
 $ git init
 Initialized empty Git repository in /Users/apple/Projects/playground/.git/
 
 $ gaa && gcmsg '$ rails new playground -T'
-[master (root-commit) 2265ecd] $ rails new playground -T
+[master (root-commit) 5b27330] $ rails new playground -T
  50 files changed, 984 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 Gemfile
@@ -273,7 +275,7 @@ Your bundle is complete!
 Use `bundle show [gemname]` to see where a bundled gem is installed.
 
 $ gaa && gcmsg 'Use mysql2 as db'
-[master 278dcd4] Use mysql2 as db
+[master 761a6ff] Use mysql2 as db
  2 files changed, 4 insertions(+), 4 deletions(-)
 
 $ sed -i '' '10,13d' .gitignore
@@ -296,7 +298,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 $ gaa && gcmsg 'Add database.yml & secrets.yml to .gitignore'
-[master a85fbe0] Add database.yml & secrets.yml to .gitignore
+[master 34d1c37] Add database.yml & secrets.yml to .gitignore
  3 files changed, 4 insertions(+), 51 deletions(-)
  delete mode 100644 config/database.yml
  delete mode 100644 config/secrets.yml
@@ -312,7 +314,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 
 $ gaa && gcmsg 'Add database.yml & secrets.yml'
-[master 05dd77d] Add database.yml & secrets.yml
+[master ebd2647] Add database.yml & secrets.yml
  2 files changed, 28 insertions(+)
  create mode 100644 config/database.yml.example
  create mode 100644 config/secrets.yml.example
@@ -327,7 +329,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 
 $ gaa && gcmsg '$ rake db:create db:migrate'
-[master 1397495] $ rake db:create db:migrate
+[master 2d082f4] $ rake db:create db:migrate
  1 file changed, 16 insertions(+)
  create mode 100644 db/schema.rb
 
