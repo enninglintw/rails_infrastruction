@@ -18,4 +18,4 @@ echo
   echo "$ ll $project_name" &&
   ls -l $project_name &&
   echo
-) | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name"_revert.rb
+) 2>&1 | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name"_revert.rb
