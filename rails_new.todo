@@ -41,6 +41,6 @@ rails_new.todo
   ❑ $ gaa && gcmsg "$ rake db:create db:migrate"
 
 # rails new revert
-❑ $ cd ~/Projects
-❑ $ ls -l playground && rm -rf playground
-❑ $ ls -l playground
+❑ $ cd ~/Projects/$project_name && pwd
+❑ $ rake db:drop
+❑ $ rm -rf ~/Projects/$project_name && ls -l ~/Projects/$project_name
