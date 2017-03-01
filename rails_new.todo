@@ -36,6 +36,9 @@ rails_new.todo
   ❑ $ sed -i '' "s/\$test_secret_key_base/$(rake secret)/g" config/secrets.yml
   ❑ $ gst
   ❑ $ gaa && gcmsg 'Add database.yml & secrets.yml'
+❑ $ rake db:create db:migrate
+  ❑ $ rake db:create db:migrate && gst
+  ❑ $ gaa && gcmsg "$ rake db:create db:migrate"
 
 # rails new revert
 ❑ $ cd ~/Projects

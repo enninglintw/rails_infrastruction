@@ -91,5 +91,15 @@ echo
   echo "$ gaa && gcmsg 'Add database.yml & secrets.yml'" &&
   git add . &&
   git commit -m "Add database.yml & secrets.yml" &&
+  echo &&
+
+  echo "$ rake db:create db:migrate && gst" &&
+  rake db:create db:migrate &&
+  git status &&
+  echo &&
+
+  echo "$ gaa && gcmsg '$ rake db:create db:migrate'" &&
+  git add . &&
+  git commit -m "$ rake db:create db:migrate" &&
   echo
 ) | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name".rb
