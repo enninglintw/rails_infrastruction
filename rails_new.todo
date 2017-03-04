@@ -9,6 +9,11 @@ rails_new.todo
   ❑ $ rails -v
   ❑ $ git init
   ❑ $ gaa && gcmsg "$ rails new $project_name -T"
+❑ Fix gem thor version as 0.19.1
+  ❑ $ echo "gem 'thor', '0.19.1'" >> Gemfile
+  ❑ $ bundle update thor
+  ❑ $ gst
+  ❑ $ gaa && gcmsg 'Fix gem thor version'
 ❑ Use mysql2 as db, by replacing "sqlite3" with "mysql2" in Gemfile
   ❑ $ sed -i '' 's/sqlite3/mysql2/g' Gemfile
   ❑ $ bundle install

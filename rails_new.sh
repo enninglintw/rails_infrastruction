@@ -40,6 +40,17 @@ echo
   git commit -m "$ rails new $project_name -T" &&
   echo &&
 
+  echo "Fix gem thor version as 0.19.1" &&
+  echo "gem 'thor', '0.19.1'" >> Gemfile &&
+  bundle update thor &&
+  git status &&
+  echo &&
+
+  echo "$ gaa && gcmsg 'Fix gem thor version'" &&
+  git add . &&
+  git commit -m "Fix gem thor version" &&
+  echo &&
+
   echo "$ sed -i '' 's/sqlite3/mysql2/g' Gemfile && gst" &&
   sed -i '' 's/sqlite3/mysql2/g' Gemfile &&
   git status &&
