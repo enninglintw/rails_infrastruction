@@ -1,19 +1,16 @@
 read -p "Project name: " project_name
 echo
 
-(
-  echo "Rails infrastruction for project '$project_name':\n" &&
+set -x
 
-  echo "$ cd ~/Projects/$project_name && pwd" &&
+(
   cd ~/Projects/$project_name &&
   pwd &&
   echo &&
 
-  echo "$ rake db:drop"
-  rake db:drop
-  echo
+  rake db:drop &&
+  echo &&
 
-  echo "$ rm -rf ~/Projects/$project_name && ll ~/Projects/$project_name" &&
   rm -rf ~/Projects/$project_name &&
   ls -l ~/Projects/$project_name &&
   echo
