@@ -1,116 +1,89 @@
-echo "Please enter project name:"
-read project_name
+read -p "Project name: " project_name
+read -s -p "Mysql password: " mysql_password
 echo
 
-echo "Please enter mysql password:"
-read -s mysql_password
-echo
+set -x
+
+output_file="$(pwd)/project_"$project_name".rb"
 
 (
-  echo "Rails infrastruction for project '$project_name':\n" &&
-
-  echo "$ cd ~/Projects && pwd" &&
-  cd ~/Projects &&
-  pwd &&
-  echo &&
-
-  echo "$ rails new $project_name -T" &&
-  rails new $project_name -T &&
-  echo &&
-
-  echo "$ cd ~/Projects/$project_name && pwd" &&
-  cd ~/Projects/$project_name &&
-  pwd &&
-  echo &&
-
-  echo "$ ruby -v" &&
-  ruby -v &&
-  echo &&
-
-  echo "$ rails -v" &&
-  rails -v &&
-  echo &&
-
-  echo "$ git init" &&
-  git init &&
-  echo &&
-
-  echo "$ gaa && gcmsg '$ rails new $project_name -T'" &&
-  git add . &&
-  git commit -m "$ rails new $project_name -T" &&
-  echo &&
-
-  echo "Fix gem thor version as 0.19.1" &&
-  echo "gem 'thor', '0.19.1'" >> Gemfile &&
-  bundle update thor &&
-  git status &&
-  echo &&
-
-  echo "$ gaa && gcmsg 'Fix gem thor version'" &&
-  git add . &&
-  git commit -m "Fix gem thor version" &&
-  echo &&
-
-  echo "$ sed -i '' 's/sqlite3/mysql2/g' Gemfile && gst" &&
-  sed -i '' 's/sqlite3/mysql2/g' Gemfile &&
-  git status &&
-  echo &&
-
-  echo "$ bundle install" &&
-  bundle install &&
-  echo &&
-
-  echo "$ gaa && gcmsg 'Use mysql2 as db'" &&
-  git add . &&
-  git commit -m "Use mysql2 as db" &&
-  echo &&
-
-  echo "$ sed -i '' '10,13d' .gitignore" &&
-  sed -i '' '10,13d' .gitignore &&
-
-  echo "$ echo '\n# config\n/config/database.yml\n/config/secrets.yml' >> .gitignore" &&
-  echo "\n# config\n/config/database.yml\n/config/secrets.yml" >> .gitignore &&
-
-  echo "$ rm config/database.yml" &&
-  rm config/database.yml &&
-
-  echo "$ rm config/secrets.yml" &&
-  rm config/secrets.yml &&
-
-  echo "$ gst" &&
-  git status &&
-  echo &&
-
-  echo "$ gaa && gcmsg 'Add database.yml & secrets.yml to .gitignore'" &&
-  git add . &&
-  git commit -m "Add database.yml & secrets.yml to .gitignore" &&
-  echo &&
-
-  echo "$ Add database.yml & secrets.yml && gst" &&
-  cp ~/Projects/@shell_scripts/rails_infrastruction/example/database.yml.example config/database.yml &&
-  cp ~/Projects/@shell_scripts/rails_infrastruction/example/database.yml.example config/database.yml.example &&
-  cp ~/Projects/@shell_scripts/rails_infrastruction/example/secrets.yml.example  config/secrets.yml &&
-  cp ~/Projects/@shell_scripts/rails_infrastruction/example/secrets.yml.example  config/secrets.yml.example &&
-  sed -i '' "s/\$mysql_password/$mysql_password/g"      config/database.yml &&
-  sed -i '' "s/\$project_name/$project_name/g"          config/database.yml &&
-  sed -i '' "s/\$project_name/$project_name/g"          config/database.yml.example &&
-  sed -i '' "s/\$dev_secret_key_base/$(rake secret)/g"  config/secrets.yml &&
-  sed -i '' "s/\$test_secret_key_base/$(rake secret)/g" config/secrets.yml &&
-  git status &&
-  echo &&
-
-  echo "$ gaa && gcmsg 'Add database.yml & secrets.yml'" &&
-  git add . &&
-  git commit -m "Add database.yml & secrets.yml" &&
-  echo &&
-
-  echo "$ rake db:create db:migrate && gst" &&
-  rake db:create db:migrate &&
-  git status &&
-  echo &&
-
-  echo "$ gaa && gcmsg '$ rake db:create db:migrate'" &&
-  git add . &&
-  git commit -m "$ rake db:create db:migrate" &&
+  command="rails new $project_name -T -d mysql"
+  msg="$ $command"
+  cd ~/Projects
+  pwd
+  $command
+  cd ~/Projects/$project_name
+  pwd
+  git init
+  git add .
+  git commit -m "$msg"
   echo
-) 2>&1 | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name".rb
+
+  msg="Add README.md"
+  (ruby -v; rails -v) 2>&1 | tee ~/Projects/$project_name/README.md
+  git status
+  git add .
+  git commit -m "$msg"
+  echo
+
+  msg="Fix error message: Expected string default value for '--rc'; got false (boolean)"
+  append_text="gem 'thor', '0.19.1'"
+  echo $append_text >> Gemfile
+  bundle update thor
+  git status
+  git add .
+  git commit -m "$msg"
+  echo
+
+  msg="Fix README.md"
+  (ruby -v; rails -v) 2>&1 | tee ~/Projects/$project_name/README.md
+  git status
+  git add .
+  git commit -m "$msg"
+  echo
+
+  database_file="config/database.yml"
+  secrets_file="config/secrets.yml"
+  database_eg_file="config/database.yml.example"
+  secrets_eg_file="config/secrets.yml.example"
+
+  msg="Add $database_eg_file & $secrets_eg_file"
+  cp $database_file $database_eg_file
+  cp $secrets_file $secrets_eg_file
+  sed -i '' "s/password:$/password: \"fill_in_mysql_password\"/g" $database_eg_file
+  sed -i '' "s/secret_key_base: .*$/secret_key_base: \"fill_in_secret_key\"/g" $secrets_eg_file
+  git status
+  git add .
+  git commit -m "$msg"
+  echo
+
+  msg="Modify $database_file & $secrets_file and add them to .gitignore"
+  append_text="\n# config\n/$database_file\n/$secrets_file"
+  echo $append_text >> .gitignore
+  git rm --cached $database_file
+  git rm --cached $secrets_file
+  sed -i '' "s/password:$/password: \"$mysql_password\"/g" $database_file
+  # secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+  # sed -i '' "s/secret_key_base: \<\%\= ENV["SECRET_KEY_BASE"] \%\>/secret_key_base: $(pwd) %>/g" $secrets_file
+  git status
+  git add .
+  git commit -m "$msg"
+  echo
+
+  command="rake db:create db:migrate"
+  msg="$ $command"
+  $command
+  git status
+  git add .
+  git commit -m "$msg"
+  echo
+
+  msg="Add gem 'awesome_rails_console'"
+  append_text="gem 'awesome_rails_console'"
+  echo $append_text >> Gemfile
+  bundle install
+  git status
+  git add .
+  git commit -m "$msg"
+  echo
+) 2>&1 | tee $output_file
