@@ -3,6 +3,8 @@ echo
 
 set -x
 
+output_file="$(pwd)/project_"$project_name"_revert.rb"
+
 (
   cd ~/Projects/$project_name
   pwd
@@ -14,4 +16,4 @@ set -x
   rm -rf ~/Projects/$project_name
   ls -l ~/Projects/$project_name
   echo
-) 2>&1 | tee ~/Projects/\@shell_scripts/rails_infrastruction/project_"$project_name"_revert.rb
+) 2>&1 | tee $output_file
