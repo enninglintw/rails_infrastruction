@@ -1,5 +1,4 @@
-echo "Please enter project name:"
-read project_name
+read -p "Project name: " project_name
 echo
 
 (
