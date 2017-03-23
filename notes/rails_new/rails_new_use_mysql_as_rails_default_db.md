@@ -5,5 +5,5 @@ How To Use MySQL with Your Ruby on Rails Application on Ubuntu 14.04
 https://www.digitalocean.com/community/tutorials/how-to-use-mysql-with-your-ruby-on-rails-application-on-ubuntu-14-04
 
 ```
-rails new appname -d mysql
+rails new $project_name -d mysql
 ```
