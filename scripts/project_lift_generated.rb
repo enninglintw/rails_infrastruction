@@ -121,8 +121,7 @@ Using byebug 9.0.6
 Using coffee-script-source 1.12.2
 Using execjs 2.7.0
 Using method_source 0.8.2
-Fetching thor 0.19.4
-Installing thor 0.19.4
+Using thor 0.19.4
 Using ffi 1.9.18
 Using multi_json 1.12.1
 Using rb-fsevent 0.10.2
@@ -176,7 +175,7 @@ Use `bundle info [gemname]` to see where a bundled gem is installed.
 /Users/apple/Projects/lift
 + git add .
 + git commit -m '$ rails new lift -T -d mysql'
-[master (root-commit) 6b0ddde] $ rails new lift -T -d mysql
+[master (root-commit) 077782f] $ rails new lift -T -d mysql
  66 files changed, 1195 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 Gemfile
@@ -263,7 +262,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 + git add .
 + git commit -m 'Add README.md'
-[master bf3e87d] Add README.md
+[master 1a1096d] Add README.md
  1 file changed, 4 insertions(+), 24 deletions(-)
 + echo
 
@@ -352,7 +351,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 + git add .
 + git commit -m 'Fix error message: Expected string default value for '\''--rc'\''; got false (boolean)'
-[master 78557f1] Fix error message: Expected string default value for '--rc'; got false (boolean)
+[master 7afd6dd] Fix error message: Expected string default value for '--rc'; got false (boolean)
  2 files changed, 3 insertions(+), 1 deletion(-)
 + echo
 
@@ -372,16 +371,16 @@ nothing to commit, working directory clean
 + echo
 
 + powder link
-rails_new_app.sh: line 59: powder: command not found
+Your application is now available at http://lift.dev/
 + gem install thor --version=0.19.1
 Successfully installed thor-0.19.1
 Parsing documentation for thor-0.19.1
-Done installing documentation for thor after 0 seconds
+Done installing documentation for thor after 1 seconds
 1 gem installed
 + gem uninstall thor --version=0.19.4
 Successfully uninstalled thor-0.19.4
 + powder link
-rails_new_app.sh: line 66: powder: command not found
+Your application is now available at http://lift.dev/
 + database_file=config/database.yml
 + secrets_file=config/secrets.yml
 + database_eg_file=config/database.yml.example
@@ -402,7 +401,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 + git add .
 + git commit -m 'Add config/database.yml.example & config/secrets.yml.example'
-[master 11aad90] Add config/database.yml.example & config/secrets.yml.example
+[master 537511a] Add config/database.yml.example & config/secrets.yml.example
  2 files changed, 86 insertions(+)
  create mode 100644 config/database.yml.example
  create mode 100644 config/secrets.yml.example
@@ -432,7 +431,7 @@ Changes not staged for commit:
 
 + git add .
 + git commit -m 'Modify config/database.yml & config/secrets.yml and add them to .gitignore'
-[master 23245b7] Modify config/database.yml & config/secrets.yml and add them to .gitignore
+[master 3de7e01] Modify config/database.yml & config/secrets.yml and add them to .gitignore
  3 files changed, 4 insertions(+), 86 deletions(-)
  delete mode 100644 config/database.yml
  delete mode 100644 config/secrets.yml
@@ -453,7 +452,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 + git add .
 + git commit -m '$ rake db:create db:migrate'
-[master f4dc642] $ rake db:create db:migrate
+[master 87110a5] $ rake db:create db:migrate
  1 file changed, 15 insertions(+)
  create mode 100644 db/schema.rb
 + echo
@@ -546,7 +545,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 + git add .
 + git commit -m 'Add gem '\''awesome_rails_console'\'''
-[master 655afb6] Add gem 'awesome_rails_console'
+[master 1153675] Add gem 'awesome_rails_console'
  2 files changed, 15 insertions(+)
 + echo
 
