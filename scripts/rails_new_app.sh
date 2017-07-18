@@ -38,7 +38,7 @@ output_file="$(pwd)/project_"$project_name"_generated.rb"
   # powder link
   powder link
 
-  # 5th commit
+  # 3rd commit
   database_file="config/database.yml"
   secrets_file="config/secrets.yml"
   database_eg_file="config/database.yml.example"
@@ -54,7 +54,7 @@ output_file="$(pwd)/project_"$project_name"_generated.rb"
   git commit -m "$msg"
   echo
 
-  # 6th commit
+  # 4th commit
   msg="Modify $database_file & $secrets_file and add them to .gitignore"
   append_text="\n# config\n/$database_file\n/$secrets_file"
 
@@ -69,7 +69,7 @@ output_file="$(pwd)/project_"$project_name"_generated.rb"
   git commit -m "$msg"
   echo
 
-  # 7th commit
+  # 5th commit
   command="rake db:create db:migrate"
   msg="$ $command"
 
@@ -79,7 +79,7 @@ output_file="$(pwd)/project_"$project_name"_generated.rb"
   git commit -m "$msg"
   echo
 
-  # 8th commit
+  # 6th commit
   msg="Add gem 'awesome_rails_console'"
   append_text="gem 'awesome_rails_console'"
 
