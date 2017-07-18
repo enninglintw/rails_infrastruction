@@ -35,26 +35,6 @@ output_file="$(pwd)/project_"$project_name"_generated.rb"
   git commit -m "$msg"
   echo
 
-  # 3rd commit
-  msg="Fix error message: Expected string default value for '--rc'; got false (boolean)"
-  append_text="gem 'thor', '0.19.1'"
-
-  echo $append_text >> Gemfile
-  bundle update thor
-  git status
-  git add .
-  git commit -m "$msg"
-  echo
-
-  # 4th commit
-  msg="Fix README.md"
-
-  (ruby -v; rails -v) 2>&1 | tee ~/Projects/$project_name/README.md
-  git status
-  git add .
-  git commit -m "$msg"
-  echo
-
   # powder link
   powder link
 

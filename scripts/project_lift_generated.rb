@@ -121,8 +121,7 @@ Using byebug 9.0.6
 Using coffee-script-source 1.12.2
 Using execjs 2.7.0
 Using method_source 0.8.2
-Fetching thor 0.19.4
-Installing thor 0.19.4
+Using thor 0.19.4
 Using ffi 1.9.18
 Using multi_json 1.12.1
 Using rb-fsevent 0.10.2
@@ -176,7 +175,7 @@ Use `bundle info [gemname]` to see where a bundled gem is installed.
 /Users/apple/Projects/lift
 + git add .
 + git commit -m '$ rails new lift -T -d mysql'
-[master (root-commit) 9755b1c] $ rails new lift -T -d mysql
+[master (root-commit) a6e0de8] $ rails new lift -T -d mysql
  66 files changed, 1195 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 Gemfile
@@ -263,112 +262,8 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 + git add .
 + git commit -m 'Add README.md'
-[master fdbdc08] Add README.md
+[master 2a3c9ab] Add README.md
  1 file changed, 4 insertions(+), 24 deletions(-)
-+ echo
-
-+ msg='Fix error message: Expected string default value for '\''--rc'\''; got false (boolean)'
-+ append_text='gem '\''thor'\'', '\''0.19.1'\'''
-+ echo gem ''\''thor'\'',' ''\''0.19.1'\'''
-+ bundle update thor
-The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
-Fetching gem metadata from https://rubygems.org/............
-Fetching version metadata from https://rubygems.org/...
-Fetching dependency metadata from https://rubygems.org/..
-Resolving dependencies...
-Using rake 12.0.0
-Using concurrent-ruby 1.0.5
-Using i18n 0.8.6
-Using minitest 5.10.2
-Using thread_safe 0.3.6
-Using builder 3.2.3
-Using erubi 1.6.1
-Using mini_portile2 2.2.0
-Using rack 2.0.3
-Using nio4r 2.1.0
-Using websocket-extensions 0.1.2
-Using mime-types-data 3.2016.0521
-Using arel 8.0.0
-Using bindex 0.5.0
-Using bundler 1.15.2
-Using byebug 9.0.6
-Using coffee-script-source 1.12.2
-Using execjs 2.7.0
-Using method_source 0.8.2
-Using thor 0.19.1 (was 0.19.4)
-Using ffi 1.9.18
-Using multi_json 1.12.1
-Using rb-fsevent 0.10.2
-Using ruby_dep 1.5.0
-Using mysql2 0.4.8
-Using puma 3.9.1
-Using tilt 2.0.7
-Using turbolinks-source 5.0.3
-Using tzinfo 1.2.3
-Using nokogiri 1.8.0
-Using rack-test 0.6.3
-Using sprockets 3.7.1
-Using websocket-driver 0.6.5
-Using mime-types 3.1
-Using coffee-script 2.4.1
-Using uglifier 3.2.0
-Using rb-inotify 0.9.10
-Using turbolinks 5.0.1
-Using activesupport 5.1.2
-Using loofah 2.0.3
-Using mail 2.6.6
-Using listen 3.1.5
-Using sass-listen 4.0.0
-Using rails-dom-testing 2.0.3
-Using globalid 0.4.0
-Using activemodel 5.1.2
-Using jbuilder 2.7.0
-Using spring 2.0.2
-Using rails-html-sanitizer 1.0.3
-Using sass 3.5.1
-Using activejob 5.1.2
-Using activerecord 5.1.2
-Using spring-watcher-listen 2.0.1
-Using actionview 5.1.2
-Using actionpack 5.1.2
-Using actioncable 5.1.2
-Using actionmailer 5.1.2
-Using railties 5.1.2
-Using sprockets-rails 3.2.0
-Using coffee-rails 4.2.2
-Using web-console 3.5.1
-Using rails 5.1.2
-Using sass-rails 5.0.6
-Bundle updated!
-+ git status
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   Gemfile
-	modified:   Gemfile.lock
-
-no changes added to commit (use "git add" and/or "git commit -a")
-+ git add .
-+ git commit -m 'Fix error message: Expected string default value for '\''--rc'\''; got false (boolean)'
-[master 4c4cf18] Fix error message: Expected string default value for '--rc'; got false (boolean)
- 2 files changed, 3 insertions(+), 1 deletion(-)
-+ echo
-
-+ msg='Fix README.md'
-+ tee /Users/apple/Projects/lift/README.md
-+ ruby -v
-ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin15]
-+ rails -v
-Rails 5.1.2
-+ git status
-On branch master
-nothing to commit, working directory clean
-+ git add .
-+ git commit -m 'Fix README.md'
-On branch master
-nothing to commit, working directory clean
 + echo
 
 + powder link
@@ -393,7 +288,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 + git add .
 + git commit -m 'Add config/database.yml.example & config/secrets.yml.example'
-[master 0ffe22d] Add config/database.yml.example & config/secrets.yml.example
+[master 1b68696] Add config/database.yml.example & config/secrets.yml.example
  2 files changed, 86 insertions(+)
  create mode 100644 config/database.yml.example
  create mode 100644 config/secrets.yml.example
@@ -423,7 +318,7 @@ Changes not staged for commit:
 
 + git add .
 + git commit -m 'Modify config/database.yml & config/secrets.yml and add them to .gitignore'
-[master 4cd4898] Modify config/database.yml & config/secrets.yml and add them to .gitignore
+[master 979de0c] Modify config/database.yml & config/secrets.yml and add them to .gitignore
  3 files changed, 4 insertions(+), 86 deletions(-)
  delete mode 100644 config/database.yml
  delete mode 100644 config/secrets.yml
@@ -444,7 +339,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 + git add .
 + git commit -m '$ rake db:create db:migrate'
-[master e3a532c] $ rake db:create db:migrate
+[master c18d2a0] $ rake db:create db:migrate
  1 file changed, 15 insertions(+)
  create mode 100644 db/schema.rb
 + echo
@@ -471,7 +366,7 @@ Using awesome_print 1.8.0
 Using coderay 1.1.1
 Using method_source 0.8.2
 Using slop 3.6.0
-Using thor 0.19.1
+Using thor 0.19.4
 Using bindex 0.5.0
 Using bundler 1.15.2
 Using byebug 9.0.6
@@ -523,7 +418,7 @@ Using coffee-rails 4.2.2
 Using web-console 3.5.1
 Using rails 5.1.2
 Using sass-rails 5.0.6
-Bundle complete! 16 Gemfile dependencies, 69 gems now installed.
+Bundle complete! 15 Gemfile dependencies, 69 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
 + git status
 On branch master
@@ -537,7 +432,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 + git add .
 + git commit -m 'Add gem '\''awesome_rails_console'\'''
-[master a289899] Add gem 'awesome_rails_console'
+[master 5e46c3a] Add gem 'awesome_rails_console'
  2 files changed, 15 insertions(+)
 + echo
 
