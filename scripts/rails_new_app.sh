@@ -22,7 +22,6 @@ output_file="$(pwd)/project_"$project_name"_generated.rb"
   $command
   cd ~/Projects/$project_name
   pwd
-  git init
   git add .
   git commit -m "$msg"
   echo
