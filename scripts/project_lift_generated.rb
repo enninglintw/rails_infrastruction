@@ -74,7 +74,7 @@ Fetching gem metadata from https://rubygems.org/...........
 Fetching additional metadata from https://rubygems.org/..
 Resolving dependencies...
 Using rake 12.0.0
-Installing i18n 0.8.6
+Using i18n 0.8.6
 Using json 1.8.6
 Using minitest 5.10.2
 Using thread_safe 0.3.6
@@ -112,19 +112,19 @@ Installing thor 0.19.4
 Using railties 4.2.7.1
 Using coffee-rails 4.1.1
 Using concurrent-ruby 1.0.5
-Installing ffi 1.9.18
+Using ffi 1.9.18
 Using multi_json 1.12.1
 Using jbuilder 2.7.0
 Using jquery-rails 4.3.1
-Installing mysql2 0.4.8
+Using mysql2 0.4.8
 Using sprockets 3.7.1
 Using sprockets-rails 3.2.0
 Using rails 4.2.7.1
-Installing rb-fsevent 0.10.2
-Installing rb-inotify 0.9.10
+Using rb-fsevent 0.10.2
+Using rb-inotify 0.9.10
 Using rdoc 4.3.0
-Installing sass-listen 4.0.0
-Installing sass 3.5.1
+Using sass-listen 4.0.0
+Using sass 3.5.1
 Using tilt 2.0.7
 Using sass-rails 5.0.6
 Using sdoc 0.4.2
@@ -145,7 +145,7 @@ Use `bundle show [gemname]` to see where a bundled gem is installed.
 Initialized empty Git repository in /Users/apple/Projects/lift/.git/
 + git add .
 + git commit -m '$ rails new lift -T -d mysql'
-[master (root-commit) 52c48ad] $ rails new lift -T -d mysql
+[master (root-commit) 96f8080] $ rails new lift -T -d mysql
  50 files changed, 1017 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 Gemfile
@@ -216,7 +216,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 + git add .
 + git commit -m 'Add README.md'
-[master 82eeed3] Add README.md
+[master 4bdcf39] Add README.md
  1 file changed, 5 insertions(+)
  create mode 100644 README.md
 + echo
@@ -301,7 +301,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 + git add .
 + git commit -m 'Fix error message: Expected string default value for '\''--rc'\''; got false (boolean)'
-[master 86878f5] Fix error message: Expected string default value for '--rc'; got false (boolean)
+[master 54b9a3d] Fix error message: Expected string default value for '--rc'; got false (boolean)
  2 files changed, 3 insertions(+), 1 deletion(-)
 + echo
 
@@ -322,10 +322,22 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 + git add .
 + git commit -m 'Fix README.md'
-[master 3306137] Fix README.md
+[master f27f244] Fix README.md
  1 file changed, 1 deletion(-)
 + echo
 
++ powder link
+Expected string default value for '--browser'; got false (boolean)
+Your application is now available at http://lift.dev/
++ gem install thor --version=0.19.1
+Successfully installed thor-0.19.1
+Parsing documentation for thor-0.19.1
+Done installing documentation for thor after 1 seconds
+1 gem installed
++ gem uninstall thor --version=0.19.4
+Successfully uninstalled thor-0.19.4
++ powder link
+Your application is now available at http://lift.dev/
 + database_file=config/database.yml
 + secrets_file=config/secrets.yml
 + database_eg_file=config/database.yml.example
@@ -346,7 +358,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 + git add .
 + git commit -m 'Add config/database.yml.example & config/secrets.yml.example'
-[master 9d0b954] Add config/database.yml.example & config/secrets.yml.example
+[master 66db544] Add config/database.yml.example & config/secrets.yml.example
  2 files changed, 76 insertions(+)
  create mode 100644 config/database.yml.example
  create mode 100644 config/secrets.yml.example
@@ -376,7 +388,7 @@ Changes not staged for commit:
 
 + git add .
 + git commit -m 'Modify config/database.yml & config/secrets.yml and add them to .gitignore'
-[master 1ab26e3] Modify config/database.yml & config/secrets.yml and add them to .gitignore
+[master 7631c3b] Modify config/database.yml & config/secrets.yml and add them to .gitignore
  3 files changed, 4 insertions(+), 76 deletions(-)
  delete mode 100644 config/database.yml
  delete mode 100644 config/secrets.yml
@@ -395,7 +407,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 + git add .
 + git commit -m '$ rake db:create db:migrate'
-[master 316da86] $ rake db:create db:migrate
+[master e07b715] $ rake db:create db:migrate
  1 file changed, 16 insertions(+)
  create mode 100644 db/schema.rb
 + echo
@@ -433,12 +445,12 @@ Using actionmailer 4.2.7.1
 Using activemodel 4.2.7.1
 Using arel 6.0.4
 Using activerecord 4.2.7.1
-Using awesome_print 1.7.0
+Using awesome_print 1.8.0
 Using coderay 1.1.1
 Using method_source 0.8.2
 Using slop 3.6.0
 Using pry 0.10.4
-Using pry-rails 0.3.4
+Using pry-rails 0.3.6
 Using thor 0.19.1
 Using railties 4.2.7.1
 Using awesome_rails_console 0.4.0
@@ -486,7 +498,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 + git add .
 + git commit -m 'Add gem '\''awesome_rails_console'\'''
-[master aa533a2] Add gem 'awesome_rails_console'
+[master fd92f56] Add gem 'awesome_rails_console'
  2 files changed, 16 insertions(+)
 + echo
 
