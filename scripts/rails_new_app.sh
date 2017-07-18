@@ -7,6 +7,12 @@ set -x
 output_file="$(pwd)/project_"$project_name"_generated.rb"
 
 (
+  # Check rails version
+  rails -v
+
+  # Check ruby version
+  ruby -v
+
   # 1st commit
   command="rails new $project_name -T -d mysql"
   msg="$ $command"
