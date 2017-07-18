@@ -175,7 +175,7 @@ Use `bundle info [gemname]` to see where a bundled gem is installed.
 /Users/apple/Projects/lift
 + git add .
 + git commit -m '$ rails new lift -T -d mysql'
-[master (root-commit) a6e0de8] $ rails new lift -T -d mysql
+[master (root-commit) 473be2f] $ rails new lift -T -d mysql
  66 files changed, 1195 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 Gemfile
@@ -262,7 +262,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 + git add .
 + git commit -m 'Add README.md'
-[master 2a3c9ab] Add README.md
+[master 78a5d6e] Add README.md
  1 file changed, 4 insertions(+), 24 deletions(-)
 + echo
 
@@ -288,7 +288,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 + git add .
 + git commit -m 'Add config/database.yml.example & config/secrets.yml.example'
-[master 1b68696] Add config/database.yml.example & config/secrets.yml.example
+[master 5810fe1] Add config/database.yml.example & config/secrets.yml.example
  2 files changed, 86 insertions(+)
  create mode 100644 config/database.yml.example
  create mode 100644 config/secrets.yml.example
@@ -318,7 +318,7 @@ Changes not staged for commit:
 
 + git add .
 + git commit -m 'Modify config/database.yml & config/secrets.yml and add them to .gitignore'
-[master 979de0c] Modify config/database.yml & config/secrets.yml and add them to .gitignore
+[master 483be54] Modify config/database.yml & config/secrets.yml and add them to .gitignore
  3 files changed, 4 insertions(+), 86 deletions(-)
  delete mode 100644 config/database.yml
  delete mode 100644 config/secrets.yml
@@ -339,7 +339,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 + git add .
 + git commit -m '$ rake db:create db:migrate'
-[master c18d2a0] $ rake db:create db:migrate
+[master 780e56e] $ rake db:create db:migrate
  1 file changed, 15 insertions(+)
  create mode 100644 db/schema.rb
 + echo
@@ -432,7 +432,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 + git add .
 + git commit -m 'Add gem '\''awesome_rails_console'\'''
-[master 5e46c3a] Add gem 'awesome_rails_console'
+[master 96e3978] Add gem 'awesome_rails_console'
  2 files changed, 15 insertions(+)
 + echo
 

@@ -10,6 +10,9 @@ output_file="$(pwd)/project_"$project_name"_deleted.rb"
   pwd
   echo
 
+  powder unlink
+  echo
+
   rake db:drop
   echo
 

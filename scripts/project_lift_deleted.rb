@@ -3,6 +3,10 @@
 /Users/apple/Projects/lift
 + echo
 
++ powder unlink
+Successfully removed lift
++ echo
+
 + rake db:drop
 Dropped database 'lift_development'
 Dropped database 'lift_test'
