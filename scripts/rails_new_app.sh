@@ -58,13 +58,6 @@ output_file="$(pwd)/project_"$project_name"_generated.rb"
   # powder link
   powder link
 
-  # Fix error: Expected string default value for '--browser'; got false (boolean)
-  gem install thor --version="0.19.1"
-  gem uninstall thor --version="0.19.4"
-
-  # powder link
-  powder link
-
   # 5th commit
   database_file="config/database.yml"
   secrets_file="config/secrets.yml"
