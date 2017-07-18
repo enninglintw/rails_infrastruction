@@ -1,6 +1,6 @@
-rails_new.todo
+rails_new_app.todo
 
-# rails new
+# rails new app
 ❑ rails new $project_name -T
   ❑ $ cd ~/Projects
   ❑ $ rails new $project_name -T
@@ -45,7 +45,7 @@ rails_new.todo
   ❑ $ rake db:create db:migrate && gst
   ❑ $ gaa && gcmsg "$ rake db:create db:migrate"
 
-# rails new revert
+# rails delete app
 ❑ $ cd ~/Projects/$project_name && pwd
 ❑ $ rake db:drop
 ❑ $ rm -rf ~/Projects/$project_name && ls -l ~/Projects/$project_name

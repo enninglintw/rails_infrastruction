@@ -4,7 +4,7 @@ echo
 
 set -x
 
-output_file="$(pwd)/project_"$project_name".rb"
+output_file="$(pwd)/project_"$project_name"_generated.rb"
 
 (
   # 1st commit

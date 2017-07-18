@@ -1,7 +1,7 @@
 # generate a rails app
-$ cd ~/Projects/sh_rails_infra
-$ sh rails_new.sh
+$ cd ~/Projects/infra/scripts
+$ sh rails_new_app.sh
 
-# revert a rails app
-$ cd ~/Projects/sh_rails_infra
-$ sh rails_new_revert.sh
+# delete a rails app
+$ cd ~/Projects/infra/scripts
+$ sh rails_delete_app.sh

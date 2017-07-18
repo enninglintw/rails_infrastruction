@@ -3,7 +3,7 @@ echo
 
 set -x
 
-output_file="$(pwd)/project_"$project_name"_revert.rb"
+output_file="$(pwd)/project_"$project_name"_deleted.rb"
 
 (
   cd ~/Projects/$project_name
